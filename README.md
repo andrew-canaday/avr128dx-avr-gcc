@@ -7,9 +7,12 @@ This is a basic skeleton for programming the AVR128Dx series MCUs using avr-gcc.
  1. Download the appropriate [Microchip "ATPACK" for your MCU](http://packs.download.atmel.com/)
  1. `make help ; make vars`
 
-:information_source: _Don't have a programmer? Me did I! If you have a spar mcu
-with USB serial facilities, you can make your own with a single passive
-component and a handful of jumper wires in minutes!_ See **[doc/PROGRAMMER.md](./doc/PROGRAMMER.md) for more info.
+:information_source: _Don't have a programmer? Neither did I! If you have a spare
+mcu with USB serial facilities, you can make your own with a single passive
+component and a handful of jumper wires in minutes!_ See **[doc/PROGRAMMER.md](./doc/PROGRAMMER.md)** for more info.
+
+I tossed this together in a rush. If you run into issues, feel free to create
+an issue or PR a fix. Thanks!
 
 Prerequisites
 -------------
