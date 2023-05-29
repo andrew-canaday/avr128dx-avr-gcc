@@ -26,8 +26,8 @@ AVR_OBJCOPY  ?= $(shell type -p "avr-objcopy")
 DEVICE       ?= avr128da28
 UDPI_TARGET  ?= $(DEVICE)
 CLOCK        ?= 4000000L
-PROGRAMMER   ?= stk500v1
 BAUD         ?= 115200
+PROGTYPE     ?= uart
 HEADERS      = $(shell find $(MKFILE_DIR)/lib -name "*.h")
 UNIT         ?= blink
 
@@ -49,24 +49,26 @@ ensure-tmp:
 	@mkdir -p $(BUILDTMP)
 
 vars: ## Print relevant environment vars
+	@printf "\nPaths:\n------------\n"
 	@printf  "%-20.20s%s\n"  "MKFILE_PATH:"    "$(MKFILE_PATH)"
 	@printf  "%-20.20s%s\n"  "MKFILE_DIR:"     "$(MKFILE_DIR)"
 	@printf  "%-20.20s%s\n"  "MKFILE_ABSDIR:"  "$(MKFILE_ABSDIR)"
 	@printf  "%-20.20s%s\n"  "BUILDTMP:"       "$(BUILDTMP)"
-	@printf  "%-20.20s%s\n"  "OPTIMIZATION:"   "$(OPTIMIZATION)"
+	@printf  "%-20.20s%s\n"  "ATPACK:"         "$(ATPACK)"
+	@printf "\nPrograms:\n------------\n"
 	@printf  "%-20.20s%s\n"  "AVRCC:"          "$(AVRCC)"
 	@printf  "%-20.20s%s\n"  "PYMCUPROG:"      "$(PYMCUPROG)"
-	@printf  "%-20.20s%s\n"  "PYMCUPROG_OPTS:" "$(PYMCUPROG_OPTS)"
 	@printf  "%-20.20s%s\n"  "AVR_SIZE:"       "$(AVR_SIZE)"
 	@printf  "%-20.20s%s\n"  "AVR_OBJCOPY:"    "$(AVR_OBJCOPY)"
-	@printf  "%-20.20s%s\n"  "ATPACK:"         "$(ATPACK)"
+	@printf "\nOptions:\n------------\n"
+	@printf  "%-20.20s%s\n"  "OPTIMIZATION:"   "$(OPTIMIZATION)"
 	@printf  "%-20.20s%s\n"  "DEVICE:"         "$(DEVICE)"
-	@printf  "%-20.20s%s\n"  "UDPI_TARGET:"    "$(UDPI_TARGET)"
+	@printf  "%-20.20s%s\n"  "UDPI_TARGET:"    "$(UDPI_TARGET) (defaults to DEVICE)"
 	@printf  "%-20.20s%s\n"  "CLOCK:"          "$(CLOCK)"
-	@printf  "%-20.20s%s\n"  "PROGRAMMER:"     "$(PROGRAMMER)"
+	@printf  "%-20.20s%s\n"  "PROGTYPE:"       "$(PROGTYPE)"
 	@printf  "%-20.20s%s\n"  "BAUD:"           "$(BAUD)"
-	@printf  "%-20.20s%s\n"  "UNIT:"           "$(UNIT)"
 	@printf  "%-20.20s%s\n"  "USBDEVICE:"      "$(USBDEVICE)"
+	@printf  "%-20.20s%s\n"  "UNIT:"           "$(UNIT) (main source, sans extension)"
 
 help: ## Print this makefile help menu
 	@echo "TARGETS:"
