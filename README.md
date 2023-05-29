@@ -1,7 +1,7 @@
 Barebones AVR128Dx avr-gcc Project
 ==================================
 
-This is a basic skeleton for programming the AVR128Dx series MCUs using avr-gcc.
+This is a basic skeleton for programming the AVR128Dx series MCUs using avr-gcc. (If you use Arduino, see the comprehensive [DxCore](https://github.com/SpenceKonde/DxCore), instead).
 
  1. Install prerequisites
  1. Download the appropriate [Microchip "ATPACK" for your MCU](http://packs.download.atmel.com/)
