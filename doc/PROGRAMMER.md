@@ -20,7 +20,7 @@ The Device Programmer
 Probably, the easiest / most reliable way to program this device is with a
 purpose-built programmer and standard tooling...
 
-...in my case, I wanted to get started with what I had lying around work in a
+...in my case, I wanted to get started with what I had lying around and work in a
 familiar dev environment (`vim` + `make` + `avr-gcc`), and not wait for anything
 to arrive in the mail...
 
