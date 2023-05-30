@@ -32,7 +32,7 @@ Then:
 
 ```bash
 ATPACK="/path/to/Atmel.AVR-Dx_DFP.2.2.253_atpack" \
-USBDEVICE="/dev/tty.usb<whatever> \
+USBDEVICE="/dev/tty.usb<whatever>" \
 make upload
 ```
 
