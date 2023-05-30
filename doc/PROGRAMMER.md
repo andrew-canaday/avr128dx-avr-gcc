@@ -64,7 +64,7 @@ void loop() {
 
 #### Wiring
 
-All we need to do to make the UART work as a UDPI programmer is to put a
+All we need to do to [make the UART work as a UDPI programmer](https://github.com/microchip-pic-avr-tools/pymcuprog#serial-port-updi-pyupdi) is to put a
 Schottky diode from Serial 1 Rx to Tx, like so (if you don't have a Schottky
 handy, a 1k resistor can be pressed into service):
 
