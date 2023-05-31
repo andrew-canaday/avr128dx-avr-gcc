@@ -3,7 +3,8 @@ Programming the AVR128Dx
 
 ### Contents:
 
- - [USB to Serial](#usb-to-serial-converter)
+ - [Overview](#protocol)
+ - [USB to Serial](#usb-to-serial)
  - [Wiring](#wiring)
  - [Adding a Reset Button](#adding-a-reset-button)
 
