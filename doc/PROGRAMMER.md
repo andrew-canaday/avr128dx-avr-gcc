@@ -9,7 +9,8 @@ Programming the AVR128Dx
  - [Adding a Reset Button](#adding-a-reset-button)
 
 
-### Protocol
+Protocol
+--------
 
 The AVR128Dx series of microcontrollers use a proprietary programming and
 debugging interface, UDPI (Unified Programming and Debugging Interface). You can
@@ -24,7 +25,8 @@ find detailed specifications in [the datasheet](https://www.microchip.com/en-us/
 There are some other goodies and nuances, but it's a relatively simple protocol
 with only a handful of commands for this target architecture.
 
-### Programmers...
+Programmers...
+--------------
 
 Probably, the easiest / most reliable way to program this device is with a
 purpose-built programmer and standard tooling...
