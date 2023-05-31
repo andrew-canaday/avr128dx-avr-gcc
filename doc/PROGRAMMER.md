@@ -71,4 +71,12 @@ handy, a 1k resistor can be pressed into service):
 ![Ad hoc AVR128Dx programmer wiring](./AVR128Dx-Serial-Programmer.png)
 
 
+##### Adding a Reset Button
 
+To add a **reset** button:
+ - add a push-button from pin 18 (`!reset`) to ground
+ - put a 100n cap between pin 18 and ground
+
+This is the setup I have:
+
+![Ad hoc AVR128Dx programmer wiring](./AVR128Dx-Serial-Programmer-w-Reset.png)
